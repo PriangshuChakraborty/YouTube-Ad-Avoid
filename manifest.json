@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Ad Avoid",
+  "version": "1.0.0",
+  "description": "Avoid YouTube ads automatically",
+  "permissions": ["storage", "activeTab","scripting"],
+  "host_permissions": ["*://www.youtube.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "logo.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["script.js"]
+    }
+  ],
+  "icons": {
+    "128": "logo.png"
+  }
+}
